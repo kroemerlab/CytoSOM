@@ -11,7 +11,15 @@ cytosom.package@gmail.com
 
 Some dependent packages may not be available directly. They have to be installed first, within bioconductor: [flowCore](https://www.bioconductor.org/packages/release/bioc/html/flowCore.html), [CytoML](https://www.bioconductor.org/packages/release/bioc/html/CytoML.html), [flowWorkspace](https://www.bioconductor.org/packages/release/bioc/html/flowWorkspace.html), [FlowSOM](https://bioconductor.org/packages/release/bioc/html/FlowSOM.html).
 
+```R
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install(c("flowWorkspace","CytoML","FlowSOM"))
+```
+
 Then, you can install CytoSOM:
+
 ```R
 devtools::install_github(repo ="gautierstoll/CytoSOM")
 ```
