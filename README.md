@@ -15,7 +15,7 @@ Some dependent packages may not be available directly. They have to be installed
 if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 
-BiocManager::install(c("flowWorkspace","CytoML","FlowSOM"))
+BiocManager::install(c("flowCore","flowWorkspace","CytoML","FlowSOM"))
 ```
 
 Then, you can install CytoSOM:
